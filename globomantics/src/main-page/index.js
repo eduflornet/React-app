@@ -58,8 +58,8 @@ class App extends Component {
     return ( 
       <div className = "container" >
       <Header subtitle = "Providing houses all over the world" />
+      <HouseFilter countries={this.state.countries}/>
       <FeatureHouse house={this.state.featuredHouse}/>
-      <HouseFilter house={this.state.featuredHouse}/>
     </div>
     );
   }
