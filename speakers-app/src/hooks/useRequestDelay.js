@@ -1,4 +1,3 @@
-import { data } from "../../SpeakerData";
 import { useState, useEffect } from "react";
 
 export const REQUEST_STATUS = {
@@ -7,12 +6,11 @@ export const REQUEST_STATUS = {
     FAILURE: "failure"
 };
 
-function useRequestSpeakers(delayTime = 1000) {
+function useRequestDelay(delayTime = 1000, initialData=[]) {
+
+  const [data, setData] = useState(initialData);
   const [speakersData, setSpeakersData] = useState([]);
   const [requestStatus, setRequestStatus] = useState(REQUEST_STATUS.LOADING);
-  //const [isLoading, setIsLoading] = useState(true);
-  //const [hasErrored, setHasErrored] = useState(false);
-
   const [error, setError] = useState("");
 
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -32,27 +30,32 @@ function useRequestSpeakers(delayTime = 1000) {
     delayFunc();
   }, []);
 
-  function onFavoriteToggle(id) {
-    const speakersRecPrevious = speakersData.find(function (rec) {
-      return rec.id === id;
-    });
-    const speakerRecUpdated = {
-      ...speakersRecPrevious,
-      favorite: !speakersRecPrevious.favorite,
-    };
-    const speakersDataNew = speakersData.map(function (rec) {
-      return rec.id === id ? speakerRecUpdated : rec;
-    });
+  function updateRecord(recordUpdated, doneCallback) {
+    const newRecords = data.map(function (rec) {
+      return rec.id === recordUpdated.id ? recordUpdated : rec;
+    })
 
-    setSpeakersData(speakersDataNew);
+    async function delayFunction() {
+      try {
+        await delay(delayTime);
+        if(doneCallback){
+          doneCallback();
+        }
+        setData(newRecords);
+      } catch (error) {
+        console.log("error thrown inside delayFunction", error);
+      }
+    }
+    delayFunction();
+
   }
 
   return {
-    speakersData,
+    data,
     requestStatus,
     error,
-    onFavoriteToggle,
+    updateRecord,
   };
 }
 
-export default useRequestSpeakers;
+export default useRequestDelay;
