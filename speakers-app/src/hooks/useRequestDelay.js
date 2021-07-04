@@ -18,8 +18,8 @@ function useRequestDelay(delayTime = 1000, initialData=[]) {
   useEffect(() => {
     async function delayFunc() {
       try {
+        
         await delay(delayTime);
-        //throw "Had Error."
         setRequestStatus(REQUEST_STATUS.SUCCESS);
         setSpeakersData(data);
       } catch (e) {
@@ -32,7 +32,6 @@ function useRequestDelay(delayTime = 1000, initialData=[]) {
 
   function updateRecord(recordUpdated, doneCallback) {
     const originalRecords = [...data];
-
     const newRecords = data.map(function (rec) {
       return rec.id === recordUpdated.id ? recordUpdated : rec;
     })
