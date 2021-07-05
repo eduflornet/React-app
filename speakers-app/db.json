@@ -1,6 +1,22 @@
 {
   "speakers": [
     {
+      "id": "46771",
+      "first": "Edu",
+      "last": "Flores",
+      "bio": "Bio not entered yet",
+      "sessions": [
+        {
+          "id": "88888",
+          "title": "New Session For Edu",
+          "room": {
+            "name": "Main Ball Room"
+          },
+          "eventYear": "2019"
+        }
+      ]
+    },
+    {
       "id": "1269",
       "first": "Arun",
       "last": "Gupta",
@@ -798,26 +814,6 @@
           "room": {
             "name": "Fireside A",
             "capacity": 80
-          }
-        }
-      ]
-    },
-    {
-      "id": "47343",
-      "first": "Eve",
-      "last": "Porcello",
-      "company": "Moon Highway",
-      "bio": "Eve Porcello is an instructor at Moon Highway, egghead.io, and LinkedIn Learning.",
-      "twitterHandle": "eveporcello",
-      "favorite": true,
-      "sessions": [
-        {
-          "id": "7548",
-          "title": "React Is Your Friend: A Gentle Intro to the React Library",
-          "eventYear": "2019",
-          "room": {
-            "name": "Town Square B",
-            "capacity": 130
           }
         }
       ]
