@@ -9,10 +9,10 @@ function App() {
   return (
     <Layout startingTheme="light">
       <div>
-      <Header />
-      <Speakers />
-    </div>
-  </Layout>
+        <Header />
+        <Speakers />
+      </div>
+    </Layout>
   );
 }
 
