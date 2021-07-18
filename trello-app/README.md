@@ -3,7 +3,8 @@ This app was built by:
 - React.js 17.0.2
 - React hooks
 - React-dom 17.0.2
-- React DnD
+- React-dnd 14.0.2
+- React-dnd-html5-backend 14.0.0
 - styled-components: 5.3.0
 - TypeScript: 4.3.4
 - Webpack5
