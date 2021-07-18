@@ -1,6 +1,12 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Trello app
+This app was built by:
+- React.js 17.0.2
+- React hooks
+- React-dom 17.0.2
+- React DnD
+- styled-components: 5.3.0
+- TypeScript: 4.3.4
+- Webpack5
 
 ## Available Scripts
 
@@ -39,7 +45,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## References
+
+[styled-components.com/docs](https://styled-components.com/docs).
+
+[react-dnd.github.io/react-dnd/about](https://react-dnd.github.io/react-dnd/about).
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
